@@ -1,0 +1,11 @@
+
+/* Importa la tipografía Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+
+/* Estilos globales básicos */
+body {
+    background-color: #1E1E1E; /* Fondo oscuro */
+    font-family: 'Inter', sans-serif; /* Tipografía Inter */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina rellenos por defecto */
+}

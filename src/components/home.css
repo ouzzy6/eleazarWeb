@@ -1,0 +1,59 @@
+/* home.css */
+.home-container {
+    background-color: #1E1E1E;
+    color: white;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    
+}
+
+.logo h1 {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.logo h3 {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.select {
+    background-color: #1E1E1E;
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
