@@ -11,17 +11,22 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    
+}
+
+.logo a {
+    text-decoration: none;  /* Elimina el subrayado de los enlaces */
 }
 
 .logo h1 {
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 3rem;
+    color: white;
 }
 
 .logo h3 {
     font-weight: 400;
     font-size: 1rem;
+    color: white;
 }
 
 .links {
@@ -57,3 +62,122 @@
     font-size: 1rem;
 }
 
+.portfolio {
+    padding: 20px 5%;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* Dos columnas */
+    grid-gap: 40px;
+    margin-bottom: 40px;
+    max-width: 1400px;  /* Limita el ancho máximo del grid */
+    margin: 0 auto;  /* Centra el grid horizontalmente */
+}
+
+.video-frame {
+    background-color: #333;
+    position: relative;
+    width: 100%;  /* Usa el 100% del contenedor disponible */
+    height: 0;
+    padding-top: 56.25%;  /* Relación de aspecto 16:9 (9/16 = 56.25%) */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.video-frame img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;  /* Ajusta el ancho de la imagen al 100% */
+    height: 100%;  /* Ajusta la altura de la imagen al 100% */
+    object-fit: cover;  /* Mantiene la proporción de la imagen sin distorsionar */
+}
+
+.frame-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 25%;
+    opacity: 0;  /* Inicialmente oculto */
+    color: white;
+    transition: opacity 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.video-frame:hover .frame-text {
+    opacity: 1;  /* Muestra el texto al hacer hover */
+}
+
+.video-frame:hover img, .video-frame-short:hover img {
+    filter: brightness(50%);  /* Oscurece la imagen al pasar el cursor */
+}
+
+
+.video-frame:hover {
+    background-color: rgba(0, 0, 0, 0.5);  /* Oscurece el fondo */
+}
+
+/* Estilos para los videos de formato "short" */
+.video-frame-short {
+    background-color: #333;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 177.78%;  /* Relación de aspecto 9:16 (16/9 = 1.7778 -> 177.78%) */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.video-grid-short {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* Tres columnas para el formato short */
+    grid-gap: 40px;
+    max-width: 1100px;  /* Limita el ancho máximo del grid de shorts */
+    margin: 0 auto;  /* Centra el grid horizontalmente */
+    margin-top: 3%;
+}
+
+.video-frame-short img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;  /* Ajusta el ancho de la imagen al 100% */
+    height: 100%;  /* Ajusta la altura de la imagen al 100% */
+    object-fit: cover;  /* Mantiene la proporción de la imagen sin distorsionar */
+}
+
+.frame-text-short {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    opacity: 0;  /* Inicialmente oculto */
+    color: white;
+    transition: opacity 0.3s ease;
+    margin-bottom: 75%;
+    font-family: 'Inter', sans-serif;
+}
+
+.video-frame-short:hover .frame-text-short {
+    opacity: 1;  /* Muestra el texto al hacer hover */
+}
+
+.video-frame-short:hover {
+    background-color: rgba(0, 0, 0, 0.5);  /* Oscurece el fondo */
+}
+
+.copyright {
+    padding: 20px 5%;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
