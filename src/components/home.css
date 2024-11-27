@@ -27,6 +27,7 @@
     font-weight: 400;
     font-size: 1rem;
     color: white;
+    margin-top: -7%;
 }
 
 .links {
@@ -106,7 +107,7 @@
     color: white;
     transition: opacity 0.3s ease;
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 .video-frame:hover .frame-text {
@@ -164,6 +165,7 @@
     transition: opacity 0.3s ease;
     margin-bottom: 75%;
     font-family: 'Inter', sans-serif;
+    font-weight: 700;
 }
 
 .video-frame-short:hover .frame-text-short {
@@ -173,6 +175,15 @@
 .video-frame-short:hover {
     background-color: rgba(0, 0, 0, 0.5);  /* Oscurece el fondo */
 }
+
+.video-frame img {
+    transition: opacity 0.3s ease;
+}
+
+.redrum-frame:hover img {
+    content: url('/redrum-1.png');  /* Cambia la imagen cuando pasa el mouse */
+}
+
 
 .copyright {
     padding: 20px 5%;
