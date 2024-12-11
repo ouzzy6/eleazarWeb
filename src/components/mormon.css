@@ -1,0 +1,121 @@
+.logo-container {
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: flex-start; /* Alinea el logo a la izquierda */
+    padding: 20px 5%; /* Espaciado consistente */
+    background-color: #1E1E1E;
+    color: white;
+    min-height: 100vh; /* Altura completa de la pantalla */
+    box-sizing: border-box;
+    gap: 20px; /* Espaciado entre los elementos dentro del contenedor */
+}
+
+.logo {
+    text-align: left; /* Mantiene el logo alineado a la izquierda */
+}
+
+.titulo, .subtitulo {
+    text-align: center; /* Centra el texto horizontalmente */
+    width: 100%; /* Asegura que el contenido ocupe el ancho del contenedor */
+    margin: 0; /* Elimina márgenes por defecto */
+    font-family: 'Inter', sans-serif;
+}
+
+.titulo {
+    margin-top: 40px; /* Separa el título del logo */
+    
+}
+
+.titulo h2 {
+    font-size: 4.5rem; /* Tamaño de fuente del título */
+    font-weight: 900; /* Negrita */
+    
+}
+
+.subtitulo {
+    font-size: 1rem; /* Tamaño de fuente más pequeño */
+    font-weight: 400; /* Peso normal */
+    color: white; /* Color más tenue */
+    margin-top: -60px;
+}
+
+.content-container {
+    display: flex; /* Organiza el video y el texto horizontalmente */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente */
+    margin-top: 20px; /* Espaciado entre subtítulo y contenido */
+    gap: 120px; /* Espaciado entre el video y el texto */
+    margin-left: 5%;
+}
+
+.video {
+    flex: 10; /* El video ocupa una proporción del espacio */
+    max-width: 100%; /* Limita el ancho máximo del video */
+}
+
+.video iframe {
+    width: 100%; /* Asegura que el video sea responsivo */
+    height: 400px; /* Altura fija del video */
+    border: none; /* Elimina bordes */
+}
+
+.texto {
+    flex: 7; /* Para alinearlo con el video */
+    max-width: 50%; /* Limita el ancho máximo */
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #E0E0E0;
+    text-align: left;
+}
+
+.titulo-texto {
+    font-size: 1.2rem; /* Tamaño ligeramente mayor para destacar */
+    font-weight: bold; /* Negrita para el título */
+    margin-bottom: 10px; /* Espacio entre el título y la lista */
+    padding-left: 20px;
+    margin-top: 23%;
+}
+
+.texto ul {
+    padding-left: 20px; /* Indentación para los elementos de la lista */
+    list-style: none; /* Elimina los puntos predeterminados de la lista */
+}
+
+.texto ul li {
+    margin-bottom: 8px; /* Espaciado entre cada elemento de la lista */
+}
+
+.texto ul li::before {
+    content: "•"; /* Agrega un punto personalizado */
+    color: white; /* Color dorado para destacar */
+    margin-right: 8px; /* Espacio entre el punto y el texto */
+    font-size: 1.2rem;
+}
+
+.imagenes-container {
+    display: flex; /* Organiza las imágenes en una fila */
+    justify-content: space-between; /* Espacio entre las imágenes */
+    gap: 40px; /* Espaciado entre cada imagen */
+    margin-top: 100px; /* Espaciado entre el contenido previo y las imágenes */
+    width: 90%; /* Asegura que el contenedor ocupe un 90% del ancho */
+    margin-left: 5%; /* Centra el contenedor dentro de la pantalla */
+}
+
+.imagen-frame {
+    display: inline-block; /* La imagen se ajustará al tamaño natural de la imagen */
+    width: auto;
+    height: auto;
+}
+
+.imagen-frame img {
+    width: 100%; /* La imagen ocupará el 100% del espacio disponible */
+    height: auto; /* Mantiene la proporción original de la imagen */
+}
+
+.copyright {
+    padding: 20px 42%;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}

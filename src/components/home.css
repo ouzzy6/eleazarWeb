@@ -192,3 +192,40 @@
     font-weight: 400;
     font-size: 1rem;
 }
+
+.grande-frame:hover img {
+    content: url('/cortos 2.png');  /* Cambia la imagen cuando pasa el mouse */
+}
+
+.libro-frame:hover img {
+    content: url('/libro 4.png');  /* Cambia la imagen cuando pasa el mouse */
+}
+
+.endless-frame:hover img {
+    content: url('/endless 2.png');  /* Cambia la imagen cuando pasa el mouse */
+}
+
+.jungle-frame:hover img {
+    content: url('/jungle 5.png');  /* Cambia la imagen cuando pasa el mouse */
+}
+
+.panda-frame:hover img {
+    content: url('/panda 5.png');  /* Cambia la imagen cuando pasa el mouse */
+}
+
+.danza-frame:hover img {
+    content: url('/danza 5.png');  /* Cambia la imagen cuando pasa el mouse */
+}
+
+.surarquia2-frame:hover img {
+    content: url('/surarquia 2.4.png');  /* Cambia la imagen cuando pasa el mouse */
+}
+
+.surarquia1-frame:hover img {
+    content: url('/surarquia 1.3.png');  /* Cambia la imagen cuando pasa el mouse */
+}
+
+.doll-frame:hover img {
+    content: url('/doll 5.png');  /* Cambia la imagen cuando pasa el mouse */
+}
+
