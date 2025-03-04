@@ -22,7 +22,7 @@
 }
 
 .titulo {
-    margin-top: 40px; /* Separa el título del logo */
+    margin-top: -40px; /* Separa el título del logo */
     
 }
 
@@ -43,7 +43,7 @@
     display: flex; /* Organiza el video y el texto horizontalmente */
     justify-content: space-between; /* Espacio entre los elementos */
     align-items: center; /* Alinea los elementos verticalmente */
-    margin-top: 20px; /* Espaciado entre subtítulo y contenido */
+    margin-top: 60px; /* Espaciado entre subtítulo y contenido */
     gap: 120px; /* Espaciado entre el video y el texto */
     margin-left: 5%;
 }
@@ -60,12 +60,14 @@
 }
 
 .texto {
-    flex: 7; /* Para alinearlo con el video */
+    flex: 12; /* Para alinearlo con el video */
     max-width: 50%; /* Limita el ancho máximo */
     font-size: 1rem;
     line-height: 1.5;
     color: #E0E0E0;
     text-align: left;
+    margin-top: 80px;
+    margin-right: 80px;
 }
 
 .titulo-texto {
@@ -97,13 +99,13 @@
     justify-content: space-between; /* Espacio entre las imágenes */
     gap: 40px; /* Espaciado entre cada imagen */
     margin-top: 100px; /* Espaciado entre el contenido previo y las imágenes */
-    width: 90%; /* Asegura que el contenedor ocupe un 90% del ancho */
-    margin-left: 5%; /* Centra el contenedor dentro de la pantalla */
+    width: 50%; /* Asegura que el contenedor ocupe un 90% del ancho */
+    margin-left: 25%; /* Centra el contenedor dentro de la pantalla */
 }
 
 .imagen-frame {
     display: inline-block; /* La imagen se ajustará al tamaño natural de la imagen */
-    width: 600px;
+    width: 200px; /* Ancho fijo de la imagen */
     height: auto;
 }
 

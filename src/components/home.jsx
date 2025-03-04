@@ -43,27 +43,27 @@ function Home() {
                         <img src="public\libro de mormón.png" alt="Frame 1" />
                         <span className="frame-text">LIBRO DE MORMÓN</span>
                     </div>
-                    <div className="video-frame endless-frame">
+                    <div className="video-frame endless-frame" onClick={() => navigate('/endlessstairs')}>
                         <img src="public\endlesstairs (1).png" alt="Frame 2" />
                         <span className="frame-text">ENDLESSTAIRS</span>
                     </div>
-                    <div className="video-frame redrum-frame">
+                    <div className="video-frame redrum-frame" onClick={() => navigate('/redrum')}>
                         <img src="public\redrum-2.png" alt="Frame 3" />
                         <span className="frame-text">REDRUM</span>
                     </div>
-                    <div className="video-frame grande-frame">
+                    <div className="video-frame grande-frame" onClick={() => navigate('/cortos')}>
                         <img src="public\cortos en grande (1).png" alt="Frame 4" />
                         <span className="frame-text">CORTOS EN GRANDE</span>
                     </div>
-                    <div className="video-frame jungle-frame">
+                    <div className="video-frame jungle-frame" onClick={() => navigate('/jungle')}>  
                         <img src="public\jungle.png" alt="Frame 5" />
                         <span className="frame-text">JUNGLE</span>
                     </div>
-                    <div className="video-frame panda-frame">
+                    <div className="video-frame panda-frame" onClick={() => navigate('/panda')}>
                         <img src="public\panda.png" alt="Frame 6" />
                         <span className="frame-text">PANDA</span>
                     </div>
-                    <div className="video-frame danza-frame">
+                    <div className="video-frame danza-frame" onClick={() => navigate('/danza')}>
                         <img src="public\danza alejandro.png" alt="Frame 7" />
                         <span className="frame-text">DANZA</span>
                     </div>
@@ -74,16 +74,16 @@ function Home() {
                 </div>
 
                 {/* Tercer grupo de 3 frames (en formato horizontal) */}
-                <div className="video-grid-short">
+                <div className="video-grid-short" onClick={() => navigate('/surarquia2')}>
                     <div className="video-frame-short surarquia2-frame">
                         <img src="public\surarquia 2.png" alt="Frame 9" />
                         <span className="frame-text-short">SURARQUIA 2</span>
                     </div>
-                    <div className="video-frame-short surarquia1-frame">
+                    <div className="video-frame-short surarquia1-frame" onClick={() => navigate('/surarquia')}>
                         <img src="public\surarquia.png" alt="Frame 10" />
                         <span className="frame-text-short">SURARQUIA</span>
                     </div>
-                    <div className="video-frame-short doll-frame">
+                    <div className="video-frame-short doll-frame" onClick={() => navigate('/dollhouse')}>
                         <img src="public\dollhouse disco.png" alt="Frame 11" />
                         <span className="frame-text-short">DOLLHOUSE DISCO</span>
                     </div>

@@ -103,7 +103,7 @@
 
 .imagen-frame {
     display: inline-block; /* La imagen se ajustará al tamaño natural de la imagen */
-    width: 600px;
+    width: 600px; /* Ancho fijo de la imagen */
     height: auto;
 }
 
