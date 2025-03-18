@@ -9,6 +9,7 @@ import Cortos from "./components/cortos";
 import Jungle from "./components/jungle";
 import Panda from "./components/panda";
 import Danza from "./components/danza";
+import Motion from "./components/motion";
 import Surarquia2 from "./components/surarquia2";
 import Surarquia from "./components/surarquia";
 import Dollhouse from "./components/dollhouse";
@@ -26,6 +27,7 @@ function App() {
                 <Route path="/jungle" element={<Jungle />} />
                 <Route path="/panda" element={<Panda />} />
                 <Route path="/danza" element={<Danza />} />
+                <Route path="/motion" element={<Motion />} />
                 <Route path="/surarquia2" element={<Surarquia2 />} />
                 <Route path="/surarquia" element={<Surarquia />} />
                 <Route path="/dollhouse" element={<Dollhouse />} />

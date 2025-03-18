@@ -217,6 +217,10 @@
     content: url('/danza 5.png');  /* Cambia la imagen cuando pasa el mouse */
 }
 
+.motion-frame:hover img {
+    content: url('/motions 2.png');  /* Cambia la imagen cuando pasa el mouse */
+}
+
 .surarquia2-frame:hover img {
     content: url('/surarquia 2.4.png');  /* Cambia la imagen cuando pasa el mouse */
 }

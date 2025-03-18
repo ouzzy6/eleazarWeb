@@ -1,40 +1,40 @@
-.jungle-container {
+.motion-container {
     background-color: #1E1E1E;
     color: white;
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
 }
 
-.jungle-navbar {
+.motion-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
 }
 
-.jungle-logo {
+.motion-logo {
     text-align: left;
 }
 
-.jungle-logo a {
+.motion-logo a {
     text-decoration: none;
 }
 
-.jungle-logo h1 {
+.motion-logo h1 {
     font-weight: 900;
     font-size: 3rem;
     color: white;
 }
 
-.jungle-logo h3 {
+.motion-logo h3 {
     font-weight: 400;
     font-size: 1rem;
     color: white;
     margin-top: -7%;
 }
 
-.jungle-titulo,
-.jungle-subtitulo {
+.motion-titulo,
+.motion-subtitulo {
     text-align: center;
     width: 100%;
     max-width: 1200px;
@@ -42,23 +42,23 @@
     font-family: 'Inter', sans-serif;
 }
 
-.jungle-titulo {
+.motion-titulo {
     margin-top: 20px;
 }
 
-.jungle-titulo h2 {
+.motion-titulo h2 {
     font-size: 4.5rem;
     font-weight: 900;
 }
 
-.jungle-subtitulo {
+.motion-subtitulo {
     font-size: 1rem;
     font-weight: 400;
     color: white;
     margin-top: -40px; /* Pegado al título como en Mormon */
 }
 
-.jungle-content-container {
+.motion-content-container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -70,19 +70,19 @@
     margin-right: auto;
 }
 
-.jungle-video {
+.motion-video {
     flex: 1;
     width: 60%;
     max-width: 720px;
 }
 
-.jungle-video iframe {
+.motion-video iframe {
     width: 100%;
     height: 405px; /* Consistente con Mormon */
     border: none;
 }
 
-.jungle-texto {
+.motion-texto {
     flex: 1;
     width: 40%;
     max-width: 480px;
@@ -93,23 +93,23 @@
     margin-top: 0;
 }
 
-.jungle-texto ul {
+.motion-texto ul {
     padding-left: 20px;
     list-style: none;
 }
 
-.jungle-texto ul li {
+.motion-texto ul li {
     margin-bottom: 10px;
 }
 
-.jungle-texto ul li::before {
+.motion-texto ul li::before {
     content: "•";
     color: white;
     margin-right: 8px;
     font-size: 1.2rem;
 }
 
-.jungle-imagenes-container {
+.motion-imagenes-container {
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -120,18 +120,18 @@
     margin-right: auto;
 }
 
-.jungle-imagen-frame {
+.motion-imagen-frame {
     width: 33%;
     max-width: 400px;
 }
 
-.jungle-imagen-frame img {
+.motion-imagen-frame img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-.jungle-copyright {
+.motion-copyright {
     padding: 20px 5%;
     text-align: center;
     font-family: 'Inter', sans-serif;
