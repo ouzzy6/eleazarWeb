@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate, Link } from "react-router-dom"; // Añadí Link
+import { useNavigate, Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 import "./home.css";
 
@@ -38,50 +38,50 @@ function Home() {
             <div className="portfolio">
                 <div className="video-grid">
                     <div className="video-frame libro-frame" onClick={() => navigate('/mormon')}>
-                        <img src="public/libro de mormón.png" alt="Frame 1" />
+                        <img src={`${process.env.PUBLIC_URL}/libro de mormón.png`} alt="Frame 1" />
                         <span className="frame-text">EL LIBRO DE MORMÓN</span>
                     </div>
                     <div className="video-frame endless-frame" onClick={() => navigate('/endlessstairs')}>
-                        <img src="public/endlesstairs (1).png" alt="Frame 2" />
+                        <img src={`${process.env.PUBLIC_URL}/endlesstairs (1).png`} alt="Frame 2" />
                         <span className="frame-text">ENDLESSTAIRS</span>
                     </div>
                     <div className="video-frame redrum-frame" onClick={() => navigate('/redrum')}>
-                        <img src="public/redrum-2.png" alt="Frame 3" />
+                        <img src={`${process.env.PUBLIC_URL}/redrum-2.png`} alt="Frame 3" />
                         <span className="frame-text">REDRUM</span>
                     </div>
                     <div className="video-frame grande-frame" onClick={() => navigate('/cortos')}>
-                        <img src="public/cortos en grande (1).png" alt="Frame 4" />
+                        <img src={`${process.env.PUBLIC_URL}/cortos en grande (1).png`} alt="Frame 4" />
                         <span className="frame-text">CORTOS EN GRANDE</span>
                     </div>
                     <div className="video-frame jungle-frame" onClick={() => navigate('/jungle')}>
-                        <img src="public/jungle.png" alt="Frame 5" />
+                        <img src={`${process.env.PUBLIC_URL}/jungle.png`} alt="Frame 5" />
                         <span className="frame-text">JUNGLE</span>
                     </div>
                     <div className="video-frame panda-frame" onClick={() => navigate('/panda')}>
-                        <img src="public/panda.png" alt="Frame 6" />
+                        <img src={`${process.env.PUBLIC_URL}/panda.png`} alt="Frame 6" />
                         <span className="frame-text">PANDA</span>
                     </div>
                     <div className="video-frame danza-frame" onClick={() => navigate('/danza')}>
-                        <img src="public/danza alejandro.png" alt="Frame 7" />
+                        <img src={`${process.env.PUBLIC_URL}/danza alejandro.png`} alt="Frame 7" />
                         <span className="frame-text">DANZA</span>
                     </div>
                     <div className="video-frame motion-frame" onClick={() => navigate('/motion')}>
-                        <img src="public/motions 1.png" alt="Frame 8" />
+                        <img src={`${process.env.PUBLIC_URL}/motions 1.png`} alt="Frame 8" />
                         <span className="frame-text">MOTION GRAPHICS AND ANIMATION PORTFOLIO</span>
                     </div>
                 </div>
 
                 <div className="video-grid-short">
                     <div className="video-frame-short surarquia2-frame" onClick={() => navigate('/surarquia2')}>
-                        <img src="public/surarquia 2.png" alt="Frame 9" />
+                        <img src={`${process.env.PUBLIC_URL}/surarquia 2.png`} alt="Frame 9" />
                         <span className="frame-text-short">SURARQUIA 2</span>
                     </div>
                     <div className="video-frame-short surarquia1-frame" onClick={() => navigate('/surarquia')}>
-                        <img src="public/surarquia.png" alt="Frame 10" />
+                        <img src={`${process.env.PUBLIC_URL}/surarquia.png`} alt="Frame 10" />
                         <span className="frame-text-short">SURARQUIA</span>
                     </div>
                     <div className="video-frame-short doll-frame" onClick={() => navigate('/dollhouse')}>
-                        <img src="public/dollhouse disco.png" alt="Frame 11" />
+                        <img src={`${process.env.PUBLIC_URL}/dollhouse disco.png`} alt="Frame 11" />
                         <span className="frame-text-short">DOLLHOUSE DISCO</span>
                     </div>
                 </div>
