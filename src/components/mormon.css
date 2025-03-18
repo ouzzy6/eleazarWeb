@@ -5,11 +5,13 @@
     font-family: 'Inter', sans-serif;
 }
 
+/* Navbar */
 .mormon-navbar {
     display: flex;
-    justify-content: space-between; /* Igual que en .navbar de home.css */
-    align-items: center; /* Igual que en .navbar de home.css */
-    padding: 20px 5%; /* Igual que en .navbar de home.css */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
 }
 
 .mormon-logo {
@@ -17,35 +19,35 @@
 }
 
 .mormon-logo a {
-    text-decoration: none; /* Igual que en .logo a de home.css */
+    text-decoration: none;
 }
 
 .mormon-logo h1 {
-    font-weight: 900; /* Igual que en .logo h1 de home.css */
-    font-size: 3rem; /* Igual que en .logo h1 de home.css */
-    color: white; /* Igual que en .logo h1 de home.css */
+    font-weight: 900;
+    font-size: 3rem;
+    color: white;
     
 }
 
 .mormon-logo h3 {
-    font-weight: 400; /* Igual que en .logo h3 de home.css */
-    font-size: 1rem; /* Igual que en .logo h3 de home.css */
-    color: white; /* Igual que en .logo h3 de home.css */
-    margin-top: -7%; /* Igual que en .logo h3 de home.css */
-    
+    font-weight: 400;
+    font-size: 1rem;
+    color: white;
+    margin-top: -7%;
 }
 
+/* Título y Subtítulo */
 .mormon-titulo,
 .mormon-subtitulo {
     text-align: center;
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto; /* Centramos como en home.css */
+    margin: 0 auto;
     font-family: 'Inter', sans-serif;
 }
 
 .mormon-titulo {
-    margin-top: 20px; /* Espacio desde el navbar */
+    margin-top: 20px;
 }
 
 .mormon-titulo h2 {
@@ -58,9 +60,10 @@
     font-size: 1rem;
     font-weight: 400;
     color: white;
-    margin-top: -40px; /* Más pegado al título "LIBRO DE MORMÓN" */
+    margin-top: -40px;
 }
 
+/* Contenedor de video y texto */
 .mormon-content-container {
     display: flex;
     justify-content: center;
@@ -70,7 +73,8 @@
     width: 100%;
     max-width: 1200px;
     margin-left: auto;
-    margin-right: auto; /* Centramos como en home.css */
+    margin-right: auto;
+    padding: 0 5%; /* Añade padding lateral para evitar que se pegue a los bordes */
 }
 
 .mormon-video {
@@ -96,12 +100,6 @@
     margin-top: 0;
 }
 
-.mormon-titulo-texto {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
 .mormon-texto ul {
     padding-left: 20px;
     list-style: none;
@@ -118,6 +116,7 @@
     font-size: 1.2rem;
 }
 
+/* Contenedor de imágenes */
 .mormon-imagenes-container {
     display: flex;
     justify-content: center;
@@ -126,7 +125,7 @@
     width: 100%;
     max-width: 1200px;
     margin-left: auto;
-    margin-right: auto; /* Centramos como en home.css */
+    margin-right: auto;
 }
 
 .mormon-imagen-frame {
@@ -140,10 +139,174 @@
     display: block;
 }
 
+/* Copyright */
 .mormon-copyright {
-    padding: 20px 5%; /* Igual que en .copyright de home.css */
+    padding: 20px 5%;
     text-align: center;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 1rem;
+}
+
+/* Media Queries para Responsive Design */
+
+/* Pantallas medianas (tablets, hasta 1024px) */
+@media (max-width: 1024px) {
+    .mormon-navbar {
+        padding: 15px 3%;
+    }
+
+    .mormon-logo h1 {
+        font-size: 2.5rem;
+    }
+
+    .mormon-logo h3 {
+        font-size: 0.9rem;
+    }
+
+    .mormon-titulo h2 {
+        font-size: 3.5rem;
+    }
+
+    .mormon-subtitulo {
+        font-size: 0.95rem;
+        margin-top: -30px;
+    }
+
+    .mormon-content-container {
+        flex-direction: column; /* Apila video y texto verticalmente */
+        align-items: center;
+        margin-top: 50px;
+        gap: 30px;
+        padding: 0 3%;
+    }
+
+    .mormon-video,
+    .mormon-texto {
+        width: 100%;
+        max-width: none; /* Usa todo el ancho disponible */
+    }
+
+    .mormon-video iframe {
+        height: 350px; /* Reduce la altura del video */
+    }
+
+    .mormon-texto {
+        font-size: 0.95rem;
+    }
+
+    .mormon-imagenes-container {
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .mormon-imagen-frame {
+        width: 45%; /* Reduce a dos imágenes por fila */
+        max-width: 300px;
+    }
+}
+
+/* Pantallas pequeñas (móviles, hasta 768px) */
+@media (max-width: 768px) {
+    .mormon-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 3%;
+    }
+
+    .mormon-logo h1 {
+        font-size: 2rem;
+    }
+
+    .mormon-logo h3 {
+        font-size: 0.8rem;
+        margin-top: -5%;
+    }
+
+    .mormon-titulo h2 {
+        font-size: 2.5rem;
+    }
+
+    .mormon-subtitulo {
+        font-size: 0.9rem;
+        margin-top: -20px;
+    }
+
+    .mormon-content-container {
+        margin-top: 30px;
+        gap: 20px;
+    }
+
+    .mormon-video iframe {
+        height: 250px; /* Más pequeño para móviles */
+    }
+
+    .mormon-texto {
+        font-size: 0.9rem;
+    }
+
+    .mormon-imagenes-container {
+        flex-direction: column; /* Una imagen por fila */
+        align-items: center; /* Añadido para centrar */
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .mormon-imagen-frame {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .mormon-copyright {
+        padding: 15px 3%;
+        font-size: 0.9rem;
+    }
+}
+
+/* Pantallas muy pequeñas (móviles pequeños, hasta 480px) */
+@media (max-width: 480px) {
+    .mormon-logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .mormon-logo h3 {
+        font-size: 0.7rem;
+        margin-top: -3%;
+    }
+
+    .mormon-titulo h2 {
+        font-size: 2rem;
+    }
+
+    .mormon-subtitulo {
+        font-size: 0.85rem;
+        margin-top: -15px;
+    }
+
+    .mormon-content-container {
+        margin-top: 20px;
+        gap: 15px;
+        padding: 0 2%;
+    }
+
+    .mormon-video iframe {
+        height: 200px; /* Ajustado para pantallas muy pequeñas */
+    }
+
+    .mormon-texto {
+        font-size: 0.85rem;
+    }
+
+    .mormon-imagenes-container {
+        margin-top: 20px;
+    }
+
+    .mormon-imagen-frame {
+        max-width: 280px;
+    }
+
+    .mormon-copyright {
+        padding: 10px 2%;
+        font-size: 0.8rem;
+    }
 }

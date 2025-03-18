@@ -1,7 +1,10 @@
 import React from "react";
+import { useLanguage } from "../context/LanguageContext";
 import "./mormon.css";
 
 function Mormon() {
+    const { t } = useLanguage();
+
     return (
         <div className="mormon-container">
             {/* Navbar como en Home */}
@@ -13,10 +16,10 @@ function Mormon() {
             </div>
 
             <div className="mormon-titulo">
-                <h2>LIBRO DE MORMÓN</h2>
+                <h2>{t.mormonTitle}</h2>
             </div>
             
-            <div className="mormon-subtitulo">ESCRITO Y DIRIGIDO POR ELEAZAR UBIEDA</div>
+            <div className="mormon-subtitulo">{t.mormonSubtitle}</div>
 
             <div className="mormon-content-container">
                 <div className="mormon-video">
@@ -29,15 +32,15 @@ function Mormon() {
                     ></iframe>
                 </div>
                 <div className="mormon-texto">
-                    <p className="mormon-titulo-texto">Seleccionado en siete festivales de cine internacionales entre 2020 y 2022:</p>
+                    <p className="mormon-titulo-texto">{t.mormonTextTitle}</p>
                     <ul>
-                        <li><strong>Ganador del mejor guión:</strong> Alternative Film Festival 2020 en Toronto, Canadá</li>
-                        <li><strong>Selección Oficial:</strong> Berlin Flash Film Festival 2020 en Berlín, Alemania</li>
-                        <li><strong>Selección Oficial:</strong> Lift-Off Global Network 2020 en Reino Unido</li>
-                        <li><strong>Semi finalista:</strong> Festival del Cinema di Cefalù 2021 en Cefalù, Italia</li>
-                        <li><strong>Selección Oficial:</strong> LETNetworks' AmLatino Film Festival 2021 en Rockland, Estados Unidos</li>
-                        <li><strong>Selección Oficial:</strong> Festival Renuac 2022 en Santiago de Chile</li>
-                        <li><strong>Selección Oficial:</strong> 17th International Asto Short Film Festival 2022 en Patras, Grecia</li>
+                        <li><strong>{t.mormonWinnerLabel}</strong> {t.mormonWinnerText}</li>
+                        <li><strong>{t.mormonSelectionLabel}</strong> {t.mormonSelectionBerlin}</li>
+                        <li><strong>{t.mormonSelectionLabel}</strong> {t.mormonSelectionLiftOff2020}</li>
+                        <li><strong>{t.mormonSemifinalistLabel}</strong> {t.mormonSemifinalistText}</li>
+                        <li><strong>{t.mormonSelectionLabel}</strong> {t.mormonSelectionAmLatino}</li>
+                        <li><strong>{t.mormonSelectionLabel}</strong> {t.mormonSelectionRenuac}</li>
+                        <li><strong>{t.mormonSelectionLabel}</strong> {t.mormonSelectionAsto}</li>
                     </ul>
                 </div>
             </div>
@@ -54,7 +57,7 @@ function Mormon() {
                 </div>
             </div>
 
-            <div className="mormon-copyright">© 2025 ELEAZAR UBIEDA</div>
+            <div className="mormon-copyright">{t.copyright}</div>
         </div>
     );
 }

@@ -5,11 +5,13 @@
     font-family: 'Inter', sans-serif;
 }
 
+/* Navbar */
 .sura2-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
+    flex-wrap: wrap;
 }
 
 .sura2-logo {
@@ -24,6 +26,7 @@
     font-weight: 900;
     font-size: 3rem;
     color: white;
+    
 }
 
 .sura2-logo h3 {
@@ -33,6 +36,7 @@
     margin-top: -7%;
 }
 
+/* Título y Subtítulo */
 .sura2-titulo,
 .sura2-subtitulo {
     text-align: center;
@@ -55,9 +59,10 @@
     font-size: 1rem;
     font-weight: 400;
     color: white;
-    margin-top: -40px; /* Pegado al título como en Mormon */
+    margin-top: -40px;
 }
 
+/* Contenedor de video y texto */
 .sura2-content-container {
     display: flex;
     justify-content: center;
@@ -68,6 +73,7 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 5%;
 }
 
 .sura2-video {
@@ -78,7 +84,7 @@
 
 .sura2-video iframe {
     width: 100%;
-    height: 405px; /* Consistente con Mormon */
+    height: 405px;
     border: none;
 }
 
@@ -109,6 +115,7 @@
     font-size: 1.2rem;
 }
 
+/* Contenedor de imágenes (formato vertical) */
 .sura2-imagenes-container {
     display: flex;
     justify-content: center;
@@ -121,22 +128,182 @@
 }
 
 .sura2-imagen-frame {
-    width: 20%; /* Ajustado para formato vertical de shorts */
-    max-width: 300px; /* Más grande que los 400px anteriores, pero con proporción vertical */
-    aspect-ratio: 9 / 16; /* Proporción típica de shorts/reels */
+    width: 20%;
+    max-width: 300px;
+    aspect-ratio: 9 / 16;
 }
 
 .sura2-imagen-frame img {
     width: 100%;
-    height: 100%; /* Asegura que la imagen llene el frame */
-    object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
+/* Copyright */
 .sura2-copyright {
     padding: 20px 5%;
     text-align: center;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 1rem;
+}
+
+/* Media Queries para Responsive Design */
+@media (max-width: 1024px) {
+    .sura2-navbar {
+        padding: 15px 3%;
+    }
+
+    .sura2-logo h1 {
+        font-size: 2.5rem;
+    }
+
+    .sura2-logo h3 {
+        font-size: 0.9rem;
+    }
+
+    .sura2-titulo h2 {
+        font-size: 3.5rem;
+    }
+
+    .sura2-subtitulo {
+        font-size: 0.95rem;
+        margin-top: -30px;
+    }
+
+    .sura2-content-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        gap: 30px;
+        padding: 0 3%;
+    }
+
+    .sura2-video,
+    .sura2-texto {
+        width: 100%;
+        max-width: none;
+    }
+
+    .sura2-video iframe {
+        height: 350px;
+    }
+
+    .sura2-texto {
+        font-size: 0.95rem;
+    }
+
+    .sura2-imagenes-container {
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .sura2-imagen-frame {
+        width: 45%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sura2-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 3%;
+    }
+
+    .sura2-logo h1 {
+        font-size: 2rem;
+    }
+
+    .sura2-logo h3 {
+        font-size: 0.8rem;
+        margin-top: -5%;
+    }
+
+    .sura2-titulo h2 {
+        font-size: 2.5rem;
+    }
+
+    .sura2-subtitulo {
+        font-size: 0.9rem;
+        margin-top: -20px;
+    }
+
+    .sura2-content-container {
+        margin-top: 30px;
+        gap: 20px;
+    }
+
+    .sura2-video iframe {
+        height: 250px;
+    }
+
+    .sura2-texto {
+        font-size: 0.9rem;
+    }
+
+    .sura2-imagenes-container {
+        flex-direction: column;
+        align-items: center; /* Añadido para centrar */
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .sura2-imagen-frame {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .sura2-copyright {
+        padding: 15px 3%;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sura2-logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .sura2-logo h3 {
+        font-size: 0.7rem;
+        margin-top: -3%;
+    }
+
+    .sura2-titulo h2 {
+        font-size: 2rem;
+    }
+
+    .sura2-subtitulo {
+        font-size: 0.85rem;
+        margin-top: -15px;
+    }
+
+    .sura2-content-container {
+        margin-top: 20px;
+        gap: 15px;
+        padding: 0 2%;
+    }
+
+    .sura2-video iframe {
+        height: 200px;
+    }
+
+    .sura2-texto {
+        font-size: 0.85rem;
+    }
+
+    .sura2-imagenes-container {
+        margin-top: 20px;
+    }
+
+    .sura2-imagen-frame {
+        max-width: 280px;
+    }
+
+    .sura2-copyright {
+        padding: 10px 2%;
+        font-size: 0.8rem;
+    }
 }

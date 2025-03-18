@@ -1,7 +1,10 @@
 import React from "react";
+import { useLanguage } from "../context/LanguageContext";
 import "./redrum.css";
 
 function Redrum() {
+    const { t } = useLanguage();
+
     return (
         <div className="redrum-container">
             {/* Navbar como en Mormon */}
@@ -13,10 +16,10 @@ function Redrum() {
             </div>
 
             <div className="redrum-titulo">
-                <h2>REDRUM</h2>
+                <h2>{t.redrumTitle}</h2>
             </div>
             
-            <div className="redrum-subtitulo">BY NAGORE GONZÁLEZ</div>
+            <div className="redrum-subtitulo">{t.redrumSubtitle}</div>
 
             {/* Contenedor del video y texto */}
             <div className="redrum-content-container">
@@ -31,22 +34,7 @@ function Redrum() {
                 </div>
                 <div className="redrum-texto">
                     <ul>
-                        Tras el diseño y la confección de su última colección hace un par de años atrás, Nagore recurrió a
-                        mis servicios para la dirección y realización de éste fashion film, con pinceladas de una estética
-                        kitsch acompañada de una cinematografía un tanto bizarra. <br />
-                        <br />
-                        Fui el realizador, director, director de fotografía, operador de cámara, gaffer, editor y colorista de
-                        ésta pieza, bajo las nociones artísticas y estéticas que Nagore planteó en su colección titulada
-                        REDRUM. El montaje de éste fashion film fue inspirado en la Nouvelle Vague, con repeticiones
-                        minuciosamente calculadas en diversos momentos de la sucesión de la pieza para remarcar
-                        elementos específicos en la confección de las distintas piezas de vestuario de dicha colección. <br />
-                        <br />
-                        El sentido de éste fashion film era la promoción de REDRUM de Nagore González, previo a su
-                        paso por pasarelas de moda (runways) tanto locales como internacionales. <br />
-                        <br />
-                        <strong>Cliente:</strong> Nagore González <br />
-                        <br />
-                        <strong>Localización:</strong> Barcelona, España
+                        <div dangerouslySetInnerHTML={{ __html: t.redrumText }} />
                     </ul>
                 </div>
             </div>
@@ -63,7 +51,7 @@ function Redrum() {
                 </div>
             </div>
 
-            <div className="redrum-copyright">© 2025 ELEAZAR UBIEDA</div>
+            <div className="redrum-copyright">{t.copyright}</div>
         </div>
     );
 }

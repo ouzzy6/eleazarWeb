@@ -1,4 +1,3 @@
-/* home.css */
 .home-container {
     background-color: #1E1E1E;
     color: white;
@@ -6,21 +5,24 @@
     font-family: 'Inter', sans-serif;
 }
 
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
 }
 
 .logo a {
-    text-decoration: none;  /* Elimina el subrayado de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
 }
 
 .logo h1 {
     font-weight: 900;
     font-size: 3rem;
     color: white;
+    
 }
 
 .logo h3 {
@@ -63,25 +65,26 @@
     font-size: 1rem;
 }
 
+/* Portfolio */
 .portfolio {
     padding: 20px 5%;
 }
 
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);  /* Dos columnas */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas por defecto */
     grid-gap: 40px;
     margin-bottom: 40px;
-    max-width: 1400px;  /* Limita el ancho máximo del grid */
-    margin: 0 auto;  /* Centra el grid horizontalmente */
+    max-width: 1400px; /* Limita el ancho máximo del grid */
+    margin: 0 auto; /* Centra el grid horizontalmente */
 }
 
 .video-frame {
     background-color: #333;
     position: relative;
-    width: 100%;  /* Usa el 100% del contenedor disponible */
+    width: 100%;
     height: 0;
-    padding-top: 56.25%;  /* Relación de aspecto 16:9 (9/16 = 56.25%) */
+    padding-top: 56.25%; /* Relación de aspecto 16:9 */
     overflow: hidden;
     cursor: pointer;
 }
@@ -90,9 +93,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;  /* Ajusta el ancho de la imagen al 100% */
-    height: 100%;  /* Ajusta la altura de la imagen al 100% */
-    object-fit: cover;  /* Mantiene la proporción de la imagen sin distorsionar */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .frame-text {
@@ -103,7 +106,7 @@
     font-size: 1rem;
     text-align: center;
     margin-bottom: 25%;
-    opacity: 0;  /* Inicialmente oculto */
+    opacity: 0;
     color: white;
     transition: opacity 0.3s ease;
     font-family: 'Inter', sans-serif;
@@ -111,16 +114,15 @@
 }
 
 .video-frame:hover .frame-text {
-    opacity: 1;  /* Muestra el texto al hacer hover */
+    opacity: 1;
 }
 
 .video-frame:hover img, .video-frame-short:hover img {
-    filter: brightness(50%);  /* Oscurece la imagen al pasar el cursor */
+    filter: brightness(50%);
 }
 
-
 .video-frame:hover {
-    background-color: rgba(0, 0, 0, 0.5);  /* Oscurece el fondo */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Estilos para los videos de formato "short" */
@@ -129,17 +131,17 @@
     position: relative;
     width: 100%;
     height: 0;
-    padding-top: 177.78%;  /* Relación de aspecto 9:16 (16/9 = 1.7778 -> 177.78%) */
+    padding-top: 177.78%; /* Relación de aspecto 9:16 */
     overflow: hidden;
     cursor: pointer;
 }
 
 .video-grid-short {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* Tres columnas para el formato short */
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas por defecto */
     grid-gap: 40px;
-    max-width: 1100px;  /* Limita el ancho máximo del grid de shorts */
-    margin: 0 auto;  /* Centra el grid horizontalmente */
+    max-width: 1100px;
+    margin: 0 auto;
     margin-top: 3%;
 }
 
@@ -147,9 +149,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;  /* Ajusta el ancho de la imagen al 100% */
-    height: 100%;  /* Ajusta la altura de la imagen al 100% */
-    object-fit: cover;  /* Mantiene la proporción de la imagen sin distorsionar */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .frame-text-short {
@@ -160,7 +162,7 @@
     font-size: 1rem;
     font-weight: 400;
     text-align: center;
-    opacity: 0;  /* Inicialmente oculto */
+    opacity: 0;
     color: white;
     transition: opacity 0.3s ease;
     margin-bottom: 75%;
@@ -169,22 +171,31 @@
 }
 
 .video-frame-short:hover .frame-text-short {
-    opacity: 1;  /* Muestra el texto al hacer hover */
+    opacity: 1;
 }
 
 .video-frame-short:hover {
-    background-color: rgba(0, 0, 0, 0.5);  /* Oscurece el fondo */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .video-frame img {
     transition: opacity 0.3s ease;
 }
 
-.redrum-frame:hover img {
-    content: url('/redrum-1.png');  /* Cambia la imagen cuando pasa el mouse */
-}
+/* Cambios de imagen al hacer hover */
+.redrum-frame:hover img { content: url('/redrum-1.png'); }
+.grande-frame:hover img { content: url('/cortos 2.png'); }
+.libro-frame:hover img { content: url('/libro 4.png'); }
+.endless-frame:hover img { content: url('/endless 2.png'); }
+.jungle-frame:hover img { content: url('/jungle 5.png'); }
+.panda-frame:hover img { content: url('/panda 5.png'); }
+.danza-frame:hover img { content: url('/danza 5.png'); }
+.motion-frame:hover img { content: url('/motions 2.png'); }
+.surarquia2-frame:hover img { content: url('/surarquia 2.4.png'); }
+.surarquia1-frame:hover img { content: url('/surarquia 1.3.png'); }
+.doll-frame:hover img { content: url('/doll 5.png'); }
 
-
+/* Copyright */
 .copyright {
     padding: 20px 5%;
     text-align: center;
@@ -193,43 +204,132 @@
     font-size: 1rem;
 }
 
-.grande-frame:hover img {
-    content: url('/cortos 2.png');  /* Cambia la imagen cuando pasa el mouse */
+/* Media Queries para Responsive Design */
+
+/* Pantallas medianas (tablets, hasta 1024px) */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 3%;
+    }
+
+    .logo h1 {
+        font-size: 2.5rem;
+    }
+
+    .logo h3 {
+        font-size: 0.9rem;
+    }
+
+    .links {
+        gap: 50px; /* Reduce el espacio entre enlaces */
+    }
+
+    .link, .select {
+        font-size: 0.9rem;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr; /* Una columna en lugar de dos */
+        grid-gap: 30px;
+    }
+
+    .video-grid-short {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en lugar de tres */
+        grid-gap: 30px;
+    }
+
+    .frame-text, .frame-text-short {
+        font-size: 0.9rem;
+    }
 }
 
-.libro-frame:hover img {
-    content: url('/libro 4.png');  /* Cambia la imagen cuando pasa el mouse */
+/* Pantallas pequeñas (móviles, hasta 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 3%;
+    }
+
+    .logo h1 {
+        font-size: 2rem;
+    }
+
+    .logo h3 {
+        font-size: 0.8rem;
+        margin-top: -5%;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .link {
+        font-size: 1rem;
+    }
+
+    .language-selector {
+        margin-top: 10px;
+    }
+
+    .select {
+        font-size: 0.9rem;
+    }
+
+    .portfolio {
+        padding: 15px 3%;
+    }
+
+    .video-grid {
+        grid-gap: 20px;
+    }
+
+    .video-grid-short {
+        grid-template-columns: 1fr; /* Una columna en lugar de dos */
+        grid-gap: 20px;
+    }
+
+    .frame-text {
+        margin-bottom: 15%; /* Ajusta la posición del texto */
+    }
+
+    .frame-text-short {
+        margin-bottom: 50%; /* Ajusta la posición del texto */
+    }
 }
 
-.endless-frame:hover img {
-    content: url('/endless 2.png');  /* Cambia la imagen cuando pasa el mouse */
-}
+/* Pantallas muy pequeñas (móviles pequeños, hasta 480px) */
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.5rem;
+    }
 
-.jungle-frame:hover img {
-    content: url('/jungle 5.png');  /* Cambia la imagen cuando pasa el mouse */
-}
+    .logo h3 {
+        font-size: 0.7rem;
+        margin-top: -3%;
+    }
 
-.panda-frame:hover img {
-    content: url('/panda 5.png');  /* Cambia la imagen cuando pasa el mouse */
-}
+    .link, .select {
+        font-size: 0.8rem;
+    }
 
-.danza-frame:hover img {
-    content: url('/danza 5.png');  /* Cambia la imagen cuando pasa el mouse */
-}
+    .portfolio {
+        padding: 10px 2%;
+    }
 
-.motion-frame:hover img {
-    content: url('/motions 2.png');  /* Cambia la imagen cuando pasa el mouse */
-}
+    .video-grid, .video-grid-short {
+        grid-gap: 15px;
+    }
 
-.surarquia2-frame:hover img {
-    content: url('/surarquia 2.4.png');  /* Cambia la imagen cuando pasa el mouse */
-}
+    .frame-text, .frame-text-short {
+        font-size: 0.8rem;
+    }
 
-.surarquia1-frame:hover img {
-    content: url('/surarquia 1.3.png');  /* Cambia la imagen cuando pasa el mouse */
+    .copyright {
+        font-size: 0.8rem;
+        padding: 10px 2%;
+    }
 }
-
-.doll-frame:hover img {
-    content: url('/doll 5.png');  /* Cambia la imagen cuando pasa el mouse */
-}
-

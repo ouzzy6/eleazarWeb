@@ -1,7 +1,10 @@
 import React from "react";
+import { useLanguage } from "../context/LanguageContext";
 import "./dollhouse.css";
 
 function Doll() {
+    const { t } = useLanguage();
+
     return (
         <div className="doll-container">
             {/* Navbar como en Mormon */}
@@ -13,10 +16,10 @@ function Doll() {
             </div>
 
             <div className="doll-titulo">
-                <h2>DOLLHOUSE DISCO</h2>
+                <h2>{t.dollTitle}</h2>
             </div>
             
-            <div className="doll-subtitulo">PROMO REELS</div>
+            <div className="doll-subtitulo">{t.dollSubtitle}</div>
 
             {/* Contenedor del video y texto */}
             <div className="doll-content-container">
@@ -31,22 +34,7 @@ function Doll() {
                 </div>
                 <div className="doll-texto">
                     <ul>
-                        Rosie es una reconocida dj en la escena nocturna actual en Barcelona, bajo su seudónimo Stacey
-                        Cute organiza fiestas electrónicas feministas, donde el propósito es exponer el trabajo artístico de
-                        distintas mujeres en el ámbito musical, visual e incluso estético a nivel de tatuajes y diseño de
-                        uñas acrílicas. <br />
-                        <br />
-                        Bajo el nombre de “Dollhouse Disco” se dan estas fiestas en distintas locaciones en la ciudad
-                        cada cierto tiempo, y Rosie quiso que yo retratara la esencia de estos eventos, de una forma
-                        auténtica y global de todo lo que reúnen estas fiestas. <br />
-                        <br />
-                        Conceptualicé y grabé para luego editar y corregir a nivel de color en un formato de 9:16 para
-                        Instagram y TikTok, lo cuál era el propósito de ésta pieza, la promoción de dichos eventos en
-                        redes sociales. <br />
-                        <br />
-                        <strong>Cliente:</strong> Dollhouse Disco <br />
-                        <br />
-                        <strong>Localización:</strong> Barcelona, España
+                        <div dangerouslySetInnerHTML={{ __html: t.dollText }} />
                     </ul>
                 </div>
             </div>
@@ -63,7 +51,7 @@ function Doll() {
                 </div>
             </div>
 
-            <div className="doll-copyright">© 2025 ELEAZAR UBIEDA</div>
+            <div className="doll-copyright">{t.copyright}</div>
         </div>
     );
 }

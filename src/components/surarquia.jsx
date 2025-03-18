@@ -1,7 +1,10 @@
 import React from "react";
+import { useLanguage } from "../context/LanguageContext";
 import "./surarquia.css";
 
 function Sura() {
+    const { t } = useLanguage();
+
     return (
         <div className="sura-container">
             {/* Navbar como en Mormon */}
@@ -13,10 +16,10 @@ function Sura() {
             </div>
 
             <div className="sura-titulo">
-                <h2>SURARQUIA</h2>
+                <h2>{t.suraTitle}</h2>
             </div>
             
-            <div className="sura-subtitulo">PROMO REELS</div>
+            <div className="sura-subtitulo">{t.suraSubtitle}</div>
 
             {/* Contenedor del video y texto */}
             <div className="sura-content-container">
@@ -31,22 +34,7 @@ function Sura() {
                 </div>
                 <div className="sura-texto">
                     <ul>
-                        Felipe y Alejandro llegaron a mí para que realizara un par de reels promocionales para Instagram
-                        y TikTok, de su nueva e interesante propuesta con la que estaban recién emprendiendo: bolsos
-                        hechos a mano y diseñados por hombres, bajo el nombre de la marca “Surarquia”. <br />
-                        <br />
-                        Conceptualicé, dirigí, hice la dirección de fotografía y operación de cámara, gaffer, grabé detalles
-                        sonoros, para posteriormente editar y corregir de color éstas piezas de la mano con lo que ellos
-                        me pedían que era básicamente mostrar un poco el proceso de handcrafting y diseño de los
-                        bolsos. <br />
-                        <br />
-                        Quise crear un aura de intimidad relacionada al proceso de realización, desde el taller dónde a
-                        mano maquetan, diseñan, fabrican y posteriormente estilizan estos bolsos que venden en su
-                        tienda física en Barcelona, y en la página web de la marca. <br />
-                        <br />
-                        <strong>Cliente:</strong> Surarquia <br />
-                        <br />
-                        <strong>Localización:</strong> Barcelona, España
+                        <div dangerouslySetInnerHTML={{ __html: t.suraText }} />
                     </ul>
                 </div>
             </div>
@@ -63,7 +51,7 @@ function Sura() {
                 </div>
             </div>
 
-            <div className="sura-copyright">© 2025 ELEAZAR UBIEDA</div>
+            <div className="sura-copyright">{t.copyright}</div>
         </div>
     );
 }

@@ -1,9 +1,15 @@
 import React from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from "react-router-dom"; // Añadí Link
+import { useLanguage } from "../context/LanguageContext";
 import "./home.css";
 
 function Home() {
     const navigate = useNavigate();
+    const { language, setLanguage, t } = useLanguage();
+
+    const handleLanguageChange = (e) => {
+        setLanguage(e.target.value);
+    };
 
     return (
         <div className="home-container">
@@ -11,16 +17,16 @@ function Home() {
             <div className="navbar">
                 {/* Logo */}
                 <div className="logo">
-                    <a href="/" className="logo"><h1>ELEAZAR UBIEDA</h1></a>
-                    <a href="/" className="logo"><h3>VIDEOGRAPHER / FILMMAKER / VIDEO EDITOR</h3></a>
+                    <Link to="/" className="logo"><h1>ELEAZAR UBIEDA</h1></Link>
+                    <Link to="/" className="logo"><h3>VIDEOGRAPHER / FILMMAKER / VIDEO EDITOR</h3></Link>
                 </div>
 
                 {/* Links y selector de idioma */}
                 <div className="links">
-                    <a href="#about" className="link">ABOUT ME</a>
-                    <a href="#contact" className="link">CONTACT</a>
+                    <Link to="/about" className="link">{t.aboutMe}</Link>
+                    <Link to="/contact" className="link">{t.contact}</Link>
                     <div className="language-selector">
-                        <select className="select">
+                        <select className="select" value={language} onChange={handleLanguageChange}>
                             <option value="en">ENGLISH</option>
                             <option value="es">ESPAÑOL</option>
                         </select>
@@ -30,11 +36,10 @@ function Home() {
 
             {/* Portfolio */}
             <div className="portfolio">
-                {/* Primer grupo de 8 frames (2 por fila) */}
                 <div className="video-grid">
                     <div className="video-frame libro-frame" onClick={() => navigate('/mormon')}>
                         <img src="public/libro de mormón.png" alt="Frame 1" />
-                        <span className="frame-text">LIBRO DE MORMÓN</span>
+                        <span className="frame-text">EL LIBRO DE MORMÓN</span>
                     </div>
                     <div className="video-frame endless-frame" onClick={() => navigate('/endlessstairs')}>
                         <img src="public/endlesstairs (1).png" alt="Frame 2" />
@@ -66,24 +71,23 @@ function Home() {
                     </div>
                 </div>
 
-                {/* Tercer grupo de 3 frames (en formato horizontal) */}
                 <div className="video-grid-short">
                     <div className="video-frame-short surarquia2-frame" onClick={() => navigate('/surarquia2')}>
-                        <img src="public/surarquia 2.png" alt="Frame 9" />
+                        <img src="surarquia 2.png" alt="Frame 9" />
                         <span className="frame-text-short">SURARQUIA 2</span>
                     </div>
                     <div className="video-frame-short surarquia1-frame" onClick={() => navigate('/surarquia')}>
-                        <img src="public/surarquia.png" alt="Frame 10" />
+                        <img src="surarquia.png" alt="Frame 10" />
                         <span className="frame-text-short">SURARQUIA</span>
                     </div>
                     <div className="video-frame-short doll-frame" onClick={() => navigate('/dollhouse')}>
-                        <img src="public/dollhouse disco.png" alt="Frame 11" />
+                        <img src="dollhouse disco.png" alt="Frame 11" />
                         <span className="frame-text-short">DOLLHOUSE DISCO</span>
                     </div>
                 </div>
             </div>
 
-            <div className="copyright">© 2025 ELEAZAR UBIEDA</div>
+            <div className="copyright">{t.copyright}</div>
         </div>
     );
 }

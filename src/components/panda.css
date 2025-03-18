@@ -5,11 +5,13 @@
     font-family: 'Inter', sans-serif;
 }
 
+/* Navbar */
 .panda-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
 }
 
 .panda-logo {
@@ -24,6 +26,7 @@
     font-weight: 900;
     font-size: 3rem;
     color: white;
+    
 }
 
 .panda-logo h3 {
@@ -33,6 +36,7 @@
     margin-top: -7%;
 }
 
+/* Título y Subtítulo */
 .panda-titulo,
 .panda-subtitulo {
     text-align: center;
@@ -49,15 +53,17 @@
 .panda-titulo h2 {
     font-size: 4.5rem;
     font-weight: 900;
+    
 }
 
 .panda-subtitulo {
     font-size: 1rem;
     font-weight: 400;
     color: white;
-    margin-top: -40px; /* Pegado al título como en Mormon */
+    margin-top: -40px;
 }
 
+/* Contenedor de video y texto */
 .panda-content-container {
     display: flex;
     justify-content: center;
@@ -68,6 +74,7 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 5%; /* Añade padding lateral para evitar que se pegue a los bordes */
 }
 
 .panda-video {
@@ -78,7 +85,7 @@
 
 .panda-video iframe {
     width: 100%;
-    height: 405px; /* Consistente con Mormon */
+    height: 405px;
     border: none;
 }
 
@@ -109,6 +116,7 @@
     font-size: 1.2rem;
 }
 
+/* Contenedor de imágenes */
 .panda-imagenes-container {
     display: flex;
     justify-content: center;
@@ -131,10 +139,174 @@
     display: block;
 }
 
+/* Copyright */
 .panda-copyright {
     padding: 20px 5%;
     text-align: center;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 1rem;
+}
+
+/* Media Queries para Responsive Design */
+
+/* Pantallas medianas (tablets, hasta 1024px) */
+@media (max-width: 1024px) {
+    .panda-navbar {
+        padding: 15px 3%;
+    }
+
+    .panda-logo h1 {
+        font-size: 2.5rem;
+    }
+
+    .panda-logo h3 {
+        font-size: 0.9rem;
+    }
+
+    .panda-titulo h2 {
+        font-size: 3.5rem;
+    }
+
+    .panda-subtitulo {
+        font-size: 0.95rem;
+        margin-top: -30px;
+    }
+
+    .panda-content-container {
+        flex-direction: column; /* Apila video y texto verticalmente */
+        align-items: center;
+        margin-top: 50px;
+        gap: 30px;
+        padding: 0 3%;
+    }
+
+    .panda-video,
+    .panda-texto {
+        width: 100%;
+        max-width: none; /* Usa todo el ancho disponible */
+    }
+
+    .panda-video iframe {
+        height: 350px; /* Reduce la altura del video */
+    }
+
+    .panda-texto {
+        font-size: 0.95rem;
+    }
+
+    .panda-imagenes-container {
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .panda-imagen-frame {
+        width: 45%; /* Reduce a dos imágenes por fila */
+        max-width: 300px;
+    }
+}
+
+/* Pantallas pequeñas (móviles, hasta 768px) */
+@media (max-width: 768px) {
+    .panda-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 3%;
+    }
+
+    .panda-logo h1 {
+        font-size: 2rem;
+    }
+
+    .panda-logo h3 {
+        font-size: 0.8rem;
+        margin-top: -5%;
+    }
+
+    .panda-titulo h2 {
+        font-size: 2.5rem;
+    }
+
+    .panda-subtitulo {
+        font-size: 0.9rem;
+        margin-top: -20px;
+    }
+
+    .panda-content-container {
+        margin-top: 30px;
+        gap: 20px;
+    }
+
+    .panda-video iframe {
+        height: 250px; /* Más pequeño para móviles */
+    }
+
+    .panda-texto {
+        font-size: 0.9rem;
+    }
+
+    .panda-imagenes-container {
+        flex-direction: column; /* Una imagen por fila */
+        align-items: center; /* Añadido para centrar */
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .panda-imagen-frame {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .panda-copyright {
+        padding: 15px 3%;
+        font-size: 0.9rem;
+    }
+}
+
+/* Pantallas muy pequeñas (móviles pequeños, hasta 480px) */
+@media (max-width: 480px) {
+    .panda-logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .panda-logo h3 {
+        font-size: 0.7rem;
+        margin-top: -3%;
+    }
+
+    .panda-titulo h2 {
+        font-size: 2rem;
+    }
+
+    .panda-subtitulo {
+        font-size: 0.85rem;
+        margin-top: -15px;
+    }
+
+    .panda-content-container {
+        margin-top: 20px;
+        gap: 15px;
+        padding: 0 2%;
+    }
+
+    .panda-video iframe {
+        height: 200px; /* Ajustado para pantallas muy pequeñas */
+    }
+
+    .panda-texto {
+        font-size: 0.85rem;
+    }
+
+    .panda-imagenes-container {
+        margin-top: 20px;
+    }
+
+    .panda-imagen-frame {
+        max-width: 280px;
+    }
+
+    .panda-copyright {
+        padding: 10px 2%;
+        font-size: 0.8rem;
+    }
 }

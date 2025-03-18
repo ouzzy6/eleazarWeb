@@ -1,7 +1,10 @@
 import React from "react";
+import { useLanguage } from "../context/LanguageContext";
 import "./endlessstairs.css";
 
 function Endless() {
+    const { t } = useLanguage();
+
     return (
         <div className="endless-container">
             {/* Navbar como en Mormon */}
@@ -13,10 +16,10 @@ function Endless() {
             </div>
 
             <div className="endless-titulo">
-                <h2>ENDLESSTAIRS</h2>
+                <h2>{t.endlessTitle}</h2>
             </div>
             
-            <div className="endless-subtitulo">ESCRITO Y DIRIGIDO POR ELEAZAR UBIEDA</div>
+            <div className="endless-subtitulo">{t.endlessSubtitle}</div>
 
             {/* Contenedor del video y texto */}
             <div className="endless-content-container">
@@ -30,12 +33,12 @@ function Endless() {
                     ></iframe>
                 </div>
                 <div className="endless-texto">
-                    <p className="endless-titulo-texto">Seleccionado en cuatro festivales de cine internacionales entre 2021 y 2022:</p>
+                    <p className="endless-titulo-texto">{t.endlessTextTitle}</p>
                     <ul>
-                        <li><strong>Selección Oficial en:</strong> Subtravelling International Short Film Festival 2021 en Barcelona, España/ Seúl, Corea.</li>
-                        <li><strong>Selección Oficial en:</strong> Zeitimpuls shortfilm festival 2021 en Viena, Austria.</li>
-                        <li><strong>Selección Oficial en:</strong> Lift-Off Global Network 2022 en Reino Unido.</li>
-                        <li><strong>Selección Oficial en:</strong> Festival Renuac 2022 en Santiago de Chile.</li>
+                        <li><strong>{t.endlessSelectionLabel}</strong> {t.endlessSelectionSubtravelling}</li>
+                        <li><strong>{t.endlessSelectionLabel}</strong> {t.endlessSelectionZeitimpuls}</li>
+                        <li><strong>{t.endlessSelectionLabel}</strong> {t.endlessSelectionLiftOff2022}</li>
+                        <li><strong>{t.endlessSelectionLabel}</strong> {t.endlessSelectionRenuac}</li>
                     </ul>
                 </div>
             </div>
@@ -52,7 +55,7 @@ function Endless() {
                 </div>
             </div>
 
-            <div className="endless-copyright">© 2025 ELEAZAR UBIEDA</div>
+            <div className="endless-copyright">{t.copyright}</div>
         </div>
     );
 }

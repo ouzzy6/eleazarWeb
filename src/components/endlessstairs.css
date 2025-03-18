@@ -5,11 +5,13 @@
     font-family: 'Inter', sans-serif;
 }
 
+/* Navbar */
 .endless-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
 }
 
 .endless-logo {
@@ -24,6 +26,7 @@
     font-weight: 900;
     font-size: 3rem;
     color: white;
+    
 }
 
 .endless-logo h3 {
@@ -33,6 +36,7 @@
     margin-top: -7%;
 }
 
+/* Título y Subtítulo */
 .endless-titulo,
 .endless-subtitulo {
     text-align: center;
@@ -49,6 +53,7 @@
 .endless-titulo h2 {
     font-size: 4.5rem;
     font-weight: 900;
+    
 }
 
 .endless-subtitulo {
@@ -58,6 +63,7 @@
     margin-top: -40px;
 }
 
+/* Contenedor de video y texto */
 .endless-content-container {
     display: flex;
     justify-content: center;
@@ -68,6 +74,7 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 5%; /* Añade padding lateral para evitar que se pegue a los bordes */
 }
 
 .endless-video {
@@ -93,12 +100,6 @@
     margin-top: 0;
 }
 
-.endless-titulo-texto {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
 .endless-texto ul {
     padding-left: 20px;
     list-style: none;
@@ -115,6 +116,7 @@
     font-size: 1.2rem;
 }
 
+/* Contenedor de imágenes */
 .endless-imagenes-container {
     display: flex;
     justify-content: center;
@@ -137,10 +139,174 @@
     display: block;
 }
 
+/* Copyright */
 .endless-copyright {
     padding: 20px 5%;
     text-align: center;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 1rem;
+}
+
+/* Media Queries para Responsive Design */
+
+/* Pantallas medianas (tablets, hasta 1024px) */
+@media (max-width: 1024px) {
+    .endless-navbar {
+        padding: 15px 3%;
+    }
+
+    .endless-logo h1 {
+        font-size: 2.5rem;
+    }
+
+    .endless-logo h3 {
+        font-size: 0.9rem;
+    }
+
+    .endless-titulo h2 {
+        font-size: 3.5rem;
+    }
+
+    .endless-subtitulo {
+        font-size: 0.95rem;
+        margin-top: -30px;
+    }
+
+    .endless-content-container {
+        flex-direction: column; /* Apila video y texto verticalmente */
+        align-items: center;
+        margin-top: 50px;
+        gap: 30px;
+        padding: 0 3%;
+    }
+
+    .endless-video,
+    .endless-texto {
+        width: 100%;
+        max-width: none; /* Usa todo el ancho disponible */
+    }
+
+    .endless-video iframe {
+        height: 350px; /* Reduce la altura del video */
+    }
+
+    .endless-texto {
+        font-size: 0.95rem;
+    }
+
+    .endless-imagenes-container {
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .endless-imagen-frame {
+        width: 45%; /* Reduce a dos imágenes por fila */
+        max-width: 300px;
+    }
+}
+
+/* Pantallas pequeñas (móviles, hasta 768px) */
+@media (max-width: 768px) {
+    .endless-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 3%;
+    }
+
+    .endless-logo h1 {
+        font-size: 2rem;
+    }
+
+    .endless-logo h3 {
+        font-size: 0.8rem;
+        margin-top: -5%;
+    }
+
+    .endless-titulo h2 {
+        font-size: 2.5rem;
+    }
+
+    .endless-subtitulo {
+        font-size: 0.9rem;
+        margin-top: -20px;
+    }
+
+    .endless-content-container {
+        margin-top: 30px;
+        gap: 20px;
+    }
+
+    .endless-video iframe {
+        height: 250px; /* Más pequeño para móviles */
+    }
+
+    .endless-texto {
+        font-size: 0.9rem;
+    }
+
+    .endless-imagenes-container {
+        flex-direction: column; /* Una imagen por fila */
+        align-items: center; /* Añadido para centrar */
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .endless-imagen-frame {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .endless-copyright {
+        padding: 15px 3%;
+        font-size: 0.9rem;
+    }
+}
+
+/* Pantallas muy pequeñas (móviles pequeños, hasta 480px) */
+@media (max-width: 480px) {
+    .endless-logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .endless-logo h3 {
+        font-size: 0.7rem;
+        margin-top: -3%;
+    }
+
+    .endless-titulo h2 {
+        font-size: 2rem;
+    }
+
+    .endless-subtitulo {
+        font-size: 0.85rem;
+        margin-top: -15px;
+    }
+
+    .endless-content-container {
+        margin-top: 20px;
+        gap: 15px;
+        padding: 0 2%;
+    }
+
+    .endless-video iframe {
+        height: 200px; /* Ajustado para pantallas muy pequeñas */
+    }
+
+    .endless-texto {
+        font-size: 0.85rem;
+    }
+
+    .endless-imagenes-container {
+        margin-top: 20px;
+    }
+
+    .endless-imagen-frame {
+        max-width: 280px;
+    }
+
+    .endless-copyright {
+        padding: 10px 2%;
+        font-size: 0.8rem;
+    }
 }

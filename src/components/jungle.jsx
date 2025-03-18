@@ -1,7 +1,10 @@
 import React from "react";
+import { useLanguage } from "../context/LanguageContext";
 import "./jungle.css";
 
 function Jungle() {
+    const { t } = useLanguage();
+
     return (
         <div className="jungle-container">
             {/* Navbar como en Mormon */}
@@ -13,10 +16,10 @@ function Jungle() {
             </div>
 
             <div className="jungle-titulo">
-                <h2>JUNGLE SURF SAFARIS</h2>
+                <h2>{t.jungleTitle}</h2>
             </div>
             
-            <div className="jungle-subtitulo">PROMO VIDEO</div>
+            <div className="jungle-subtitulo">{t.jungleSubtitle}</div>
 
             {/* Contenedor del video y texto */}
             <div className="jungle-content-container">
@@ -31,23 +34,7 @@ function Jungle() {
                 </div>
                 <div className="jungle-texto">
                     <ul>
-                        Ésta vez Jungle Surf Safaris acudió a mi para que realizara éste video promocional, con el fin de
-                        tener una presencia más sólida en la internet y redes sociales, y por supuesto, promocionar sus
-                        servicios de tours de iniciación en el surf para principiantes en las hermosas playas del silvestre y
-                        colorido Algarve en el sur de Portugal. <br />
-                        <br />
-                        Fui el realizador íntegro de ésta pieza, dirigiéndola, haciendo la dirección de fotografía y operación
-                        de cámara, para posteriormente editarla, corregirla a nivel de color y componer, grabar y mezclar
-                        la música que hice específicamente para éste vídeo. <br />
-                        <br />
-                        Mi idea fue plasmar la aventura que supone el ir de excursión por el Algarve para iniciarse y
-                        sumergirse en el mundo del surf, de la mano de amigables y expertos instructores que te llevarán
-                        de la mano con la mejor de las vibras a montar tu primera ola, bajo el exquisito paisaje que
-                        brindan las maravillosas playas como lo son Vale Figueiras, y muchas otras de la zona. <br />
-                        <br />
-                        <strong>Cliente:</strong> Jungle Surf Safaris <br />
-                        <br />
-                        <strong>Localización:</strong> Lagos, Portugal
+                        <div dangerouslySetInnerHTML={{ __html: t.jungleText }} />
                     </ul>
                 </div>
             </div>
@@ -64,7 +51,7 @@ function Jungle() {
                 </div>
             </div>
 
-            <div className="jungle-copyright">© 2025 ELEAZAR UBIEDA</div>
+            <div className="jungle-copyright">{t.copyright}</div>
         </div>
     );
 }

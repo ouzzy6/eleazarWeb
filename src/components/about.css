@@ -1,0 +1,224 @@
+.aboutme-container {
+    background-color: #1E1E1E;
+    color: white;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Navbar */
+.aboutme-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.aboutme-logo {
+    text-align: left;
+}
+
+.aboutme-logo a {
+    text-decoration: none;
+}
+
+.aboutme-logo h1 {
+    font-weight: 900;
+    font-size: 3rem;
+    color: white;
+    
+}
+
+.aboutme-logo h3 {
+    font-weight: 400;
+    font-size: 1rem;
+    color: white;
+    margin-top: -7%;
+}
+
+/* Título */
+.aboutme-titulo {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.aboutme-titulo h2 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin: 0; /* Elimina márgenes por defecto */
+}
+
+/* Contenedor principal */
+.aboutme-content-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 80px;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 5%; /* Añade padding lateral para evitar que se pegue a los bordes */
+}
+
+.aboutme-texto {
+    flex: 1;
+    width: 60%;
+    max-width: 720px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #E0E0E0;
+    text-align: left;
+    margin-top: 0;
+}
+
+.aboutme-texto p {
+    margin-bottom: 1.5rem; /* Espacio entre párrafos */
+}
+
+.aboutme-foto {
+    flex: 1;
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutme-foto img {
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Copyright */
+.aboutme-copyright {
+    padding: 20px 5%;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+/* Media Queries para Responsive Design */
+
+/* Pantallas medianas (tablets, hasta 1024px) */
+@media (max-width: 1024px) {
+    .aboutme-navbar {
+        padding: 15px 3%;
+    }
+
+    .aboutme-logo h1 {
+        font-size: 2.5rem;
+    }
+
+    .aboutme-logo h3 {
+        font-size: 0.9rem;
+    }
+
+    .aboutme-titulo h2 {
+        font-size: 3.5rem;
+    }
+
+    .aboutme-content-container {
+        flex-direction: column; /* Apila texto e imagen verticalmente */
+        align-items: center;
+        margin-top: 50px;
+        gap: 30px;
+    }
+
+    .aboutme-texto {
+        width: 100%;
+        max-width: none; /* Elimina el límite para usar todo el ancho disponible */
+        font-size: 0.95rem;
+    }
+
+    .aboutme-foto {
+        width: 100%;
+        max-width: none;
+    }
+
+    .aboutme-foto img {
+        width: 250px; /* Reduce el tamaño de la imagen */
+    }
+}
+
+/* Pantallas pequeñas (móviles, hasta 768px) */
+@media (max-width: 768px) {
+    .aboutme-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 3%;
+    }
+
+    .aboutme-logo h1 {
+        font-size: 2rem;
+    }
+
+    .aboutme-logo h3 {
+        font-size: 0.8rem;
+        margin-top: -5%;
+    }
+
+    .aboutme-titulo h2 {
+        font-size: 2.5rem;
+    }
+
+    .aboutme-content-container {
+        margin-top: 30px;
+        gap: 20px;
+        padding: 0 3%;
+    }
+
+    .aboutme-texto {
+        font-size: 0.9rem;
+    }
+
+    .aboutme-foto img {
+        width: 200px;
+    }
+
+    .aboutme-copyright {
+        padding: 15px 3%;
+        font-size: 0.9rem;
+    }
+}
+
+/* Pantallas muy pequeñas (móviles pequeños, hasta 480px) */
+@media (max-width: 480px) {
+    .aboutme-logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .aboutme-logo h3 {
+        font-size: 0.7rem;
+        margin-top: -3%;
+    }
+
+    .aboutme-titulo h2 {
+        font-size: 2rem;
+    }
+
+    .aboutme-content-container {
+        margin-top: 20px;
+        gap: 15px;
+        padding: 0 2%;
+    }
+
+    .aboutme-texto {
+        font-size: 0.85rem;
+    }
+
+    .aboutme-foto img {
+        width: 150px;
+    }
+
+    .aboutme-copyright {
+        padding: 10px 2%;
+        font-size: 0.8rem;
+    }
+}

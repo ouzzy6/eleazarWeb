@@ -1,7 +1,10 @@
 import React from "react";
+import { useLanguage } from "../context/LanguageContext";
 import "./cortos.css";
 
 function Cortos() {
+    const { t } = useLanguage();
+
     return (
         <div className="cortos-container">
             {/* Navbar como en Mormon */}
@@ -13,10 +16,10 @@ function Cortos() {
             </div>
 
             <div className="cortos-titulo">
-                <h2>CORTOS EN GRANDE 2020</h2>
+                <h2>{t.cortosTitle}</h2>
             </div>
             
-            <div className="cortos-subtitulo">SPOT OFICIAL</div>
+            <div className="cortos-subtitulo">{t.cortosSubtitle}</div>
 
             {/* Contenedor del video y texto */}
             <div className="cortos-content-container">
@@ -31,22 +34,7 @@ function Cortos() {
                 </div>
                 <div className="cortos-texto">
                     <ul>
-                        Éste proyecto llegó a mí de las manos de José Gil, quien es el fundador y director del festival
-                        Cortos en Grande, festival internacional de cortometrajes radicado entre Santiago y Valparaíso en
-                        Chile. <br />
-                        <br />
-                        Conceptualicé, desarrollé y edité lo que sería éste spot que serviría para promocionar el festival
-                        en redes sociales e internet en general y que fue expuesto en la inauguración del festival en
-                        Santiago de Chile proyectado en pantalla grande y también transmitido en línea. <br />
-                        <br />
-                        Realicé éste vídeo recopilando absolutamente todos los cortometrajes participantes del festival,
-                        visionándolos, seleccionando trozos de los mismos y según el concepto que tracé fui plasmando
-                        partes de dichas películas a lo largo de éste spot para darle una forma narrativa y llamativa que
-                        atrajera al público internacional al festival, el cual era el objetivo principal de ésta pieza. <br />
-                        <br />
-                        <strong>Cliente:</strong> Cortos en Grande <br />
-                        <br />
-                        <strong>Localización:</strong> Santiago/ Valparaíso, Chile
+                        <div dangerouslySetInnerHTML={{ __html: t.cortosText }} />
                     </ul>
                 </div>
             </div>
@@ -63,7 +51,7 @@ function Cortos() {
                 </div>
             </div>
 
-            <div className="cortos-copyright">© 2025 ELEAZAR UBIEDA</div>
+            <div className="cortos-copyright">{t.copyright}</div>
         </div>
     );
 }

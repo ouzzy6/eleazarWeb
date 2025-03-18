@@ -1,7 +1,10 @@
 import React from "react";
+import { useLanguage } from "../context/LanguageContext";
 import "./motion.css";
 
 function Motion() {
+    const { t } = useLanguage();
+
     return (
         <div className="motion-container">
             {/* Navbar como en Mormon */}
@@ -13,10 +16,10 @@ function Motion() {
             </div>
 
             <div className="motion-titulo">
-                <h2>MOTION GRAPHICS AND ANIMATION PORTFOLIO</h2>
+                <h2>{t.motionTitle}</h2>
             </div>
             
-            <div className="motion-subtitulo">PROMO VIDEO</div>
+            <div className="motion-subtitulo">{t.motionSubtitle}</div>
 
             {/* Contenedor del video y texto */}
             <div className="motion-content-container">
@@ -31,12 +34,7 @@ function Motion() {
                 </div>
                 <div className="motion-texto">
                     <ul>
-                        Esto es una recopilación de varios trabajos que he hecho en la parte de animación y motion
-                        graphics a través del uso de softwares como Adobe After Effects y DaVinci Resolve. <br />
-                        <br />
-                        Como se puede evidenciar hay varias técnicas utilizadas en cada fragmento, como lo son: la
-                        metamorfosis entre letras y formas, la rotoscopia, el uso de máscaras y estilización de color,
-                        animación de caracteres y creación desde cero de interfaces a nivel visual.
+                        <div dangerouslySetInnerHTML={{ __html: t.motionText }} />
                     </ul>
                 </div>
             </div>
@@ -53,7 +51,7 @@ function Motion() {
                 </div>
             </div>
 
-            <div className="motion-copyright">© 2025 ELEAZAR UBIEDA</div>
+            <div className="motion-copyright">{t.copyright}</div>
         </div>
     );
 }

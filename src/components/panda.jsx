@@ -1,7 +1,10 @@
 import React from "react";
+import { useLanguage } from "../context/LanguageContext";
 import "./panda.css";
 
 function Panda() {
+    const { t } = useLanguage();
+
     return (
         <div className="panda-container">
             {/* Navbar como en Mormon */}
@@ -13,10 +16,10 @@ function Panda() {
             </div>
 
             <div className="panda-titulo">
-                <h2>AMERICAN PANDA</h2>
+                <h2>{t.pandaTitle}</h2>
             </div>
             
-            <div className="panda-subtitulo">PROMO VIDEO FOR CHINESE MARKET</div>
+            <div className="panda-subtitulo">{t.pandaSubtitle}</div>
 
             {/* Contenedor del video y texto */}
             <div className="panda-content-container">
@@ -31,24 +34,7 @@ function Panda() {
                 </div>
                 <div className="panda-texto">
                     <ul>
-                        Arnoldo Hurtado, creador y director de American Panda, acudió a mis servicios para realizar un
-                        vídeo promocional para su escuela de inglés online, tomando como target el mercado chino. El
-                        objetivo era captar nuevos clientes del Gran Gigante Asiático para su escuela especializada en
-                        enseñar inglés a infantes a distancia. <br />
-                        <br />
-                        Guionicé, dirigí, hice la dirección de fotografía, operación de cámara, gaffer y captación de sonido,
-                        para posteriormente editar, corregir color y diseñar el sonido de ésta pieza. <br />
-                        <br />
-                        La idea era transmitir algo fresco y llamativo, mostrando con detalle el dinamismo y eficacia del
-                        producto que en éste caso estaba relacionado a la enseñanza en línea, también detallando la
-                        facilidad de adquisición a través de una simulación de compra por medio de una plataforma de
-                        pago china, todo con una estética y vibra infantil, ya que el producto era destinado para los
-                        pequeños de la casa, sin dejar a un lado ese tono de profesionalidad que llamaría la atención a
-                        sus padres, quiénes al final serían los que contratarían éste servicio que provee American Panda. <br />
-                        <br />
-                        <strong>Cliente:</strong> American Panda <br />
-                        <br />
-                        <strong>Localización:</strong> Barcelona, España
+                        <div dangerouslySetInnerHTML={{ __html: t.pandaText }} />
                     </ul>
                 </div>
             </div>
@@ -65,7 +51,7 @@ function Panda() {
                 </div>
             </div>
 
-            <div className="panda-copyright">© 2025 ELEAZAR UBIEDA</div>
+            <div className="panda-copyright">{t.copyright}</div>
         </div>
     );
 }

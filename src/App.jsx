@@ -13,13 +13,19 @@ import Motion from "./components/motion";
 import Surarquia2 from "./components/surarquia2";
 import Surarquia from "./components/surarquia";
 import Dollhouse from "./components/dollhouse";
+import About from "./components/about";
+import Contact from "./components/contact";
+import { LanguageProvider } from "./context/LanguageContext";
 
 
 function App() {
     return (
+        <LanguageProvider>
         <Router>
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
                 <Route path="/mormon" element={<Mormon />} />
                 <Route path="/endlessstairs" element={<Endless />} />
                 <Route path="/redrum" element={<Redrum />} />
@@ -33,6 +39,7 @@ function App() {
                 <Route path="/dollhouse" element={<Dollhouse />} />
             </Routes>
         </Router>
+        </LanguageProvider>
     );
 }
 

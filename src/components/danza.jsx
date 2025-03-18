@@ -1,7 +1,10 @@
 import React from "react";
+import { useLanguage } from "../context/LanguageContext";
 import "./danza.css";
 
 function Danza() {
+    const { t } = useLanguage();
+
     return (
         <div className="danza-container">
             {/* Navbar como en Mormon */}
@@ -13,10 +16,10 @@ function Danza() {
             </div>
 
             <div className="danza-titulo">
-                <h2>CLASES DE BAILE CON ALEJANDRO ALTAMIRANO</h2>
+                <h2>{t.danzaTitle}</h2>
             </div>
             
-            <div className="danza-subtitulo">PROMO VIDEO</div>
+            <div className="danza-subtitulo">{t.danzaSubtitle}</div>
 
             {/* Contenedor del video y texto */}
             <div className="danza-content-container">
@@ -31,20 +34,7 @@ function Danza() {
                 </div>
                 <div className="danza-texto">
                     <ul>
-                        En ésta ocasión Alejandro me contactó porque necesitaba un vídeo promocional de sus clases de
-                        baile, para promocionarlas a través de redes sociales e internet. <br />
-                        <br />
-                        Hice de realizador, director de fotografía y operador de cámara, y también grabé sonido directo del
-                        piano, para posteriormente hacer el trabajo de montaje y edición. <br />
-                        <br />
-                        Quise hacer algo fuera de la común y decidí dirigirme hacía lo experimental en ésta pieza,
-                        creando una sensación de intimidad dentro de la clase de baile y los bailarines, junto con la
-                        interpretación musical en directo, cosa que me llamó mucho la atención de su propuesta de
-                        clases. <br />
-                        <br />
-                        <strong>Cliente:</strong> Alejandro Altamirano <br />
-                        <br />
-                        <strong>Localización:</strong> Barcelona, España
+                        <div dangerouslySetInnerHTML={{ __html: t.danzaText }} />
                     </ul>
                 </div>
             </div>
@@ -61,7 +51,7 @@ function Danza() {
                 </div>
             </div>
 
-            <div className="danza-copyright">© 2025 ELEAZAR UBIEDA</div>
+            <div className="danza-copyright">{t.copyright}</div>
         </div>
     );
 }
