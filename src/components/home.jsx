@@ -73,15 +73,15 @@ function Home() {
 
                 <div className="video-grid-short">
                     <div className="video-frame-short surarquia2-frame" onClick={() => navigate('/surarquia2')}>
-                        <img src="surarquia 2.png" alt="Frame 9" />
+                        <img src="public/surarquia 2.png" alt="Frame 9" />
                         <span className="frame-text-short">SURARQUIA 2</span>
                     </div>
                     <div className="video-frame-short surarquia1-frame" onClick={() => navigate('/surarquia')}>
-                        <img src="surarquia.png" alt="Frame 10" />
+                        <img src="public/surarquia.png" alt="Frame 10" />
                         <span className="frame-text-short">SURARQUIA</span>
                     </div>
                     <div className="video-frame-short doll-frame" onClick={() => navigate('/dollhouse')}>
-                        <img src="dollhouse disco.png" alt="Frame 11" />
+                        <img src="public/dollhouse disco.png" alt="Frame 11" />
                         <span className="frame-text-short">DOLLHOUSE DISCO</span>
                     </div>
                 </div>
