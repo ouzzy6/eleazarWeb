@@ -41,7 +41,7 @@ function Jungle() {
 
             <div className="jungle-imagenes-container">
                 <div className="jungle-imagen-frame">
-                    <img src="jungle 3.png" alt="Imagen 1" />
+                    <img src="jungle.png" alt="Imagen 1" />
                 </div>
                 <div className="jungle-imagen-frame">
                     <img src="jungle 4.png" alt="Imagen 2" />

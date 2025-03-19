@@ -39,7 +39,7 @@ function Home() {
                 <div className="video-grid">
                     <div className="video-frame libro-frame" onClick={() => navigate('/mormon')}>
                         <img src="/libro de mormón.png" alt="Frame 1" />
-                        <span className="frame-text">EL LIBRO DE MORMÓN</span>
+                        <span className="frame-text">{t.mormonTitle}</span>
                     </div>
                     <div className="video-frame endless-frame" onClick={() => navigate('/endlessstairs')}>
                         <img src="/endlesstairs (1).png" alt="Frame 2" />
@@ -54,7 +54,7 @@ function Home() {
                         <span className="frame-text">CORTOS EN GRANDE</span>
                     </div>
                     <div className="video-frame jungle-frame" onClick={() => navigate('/jungle')}>
-                        <img src="/jungle.png" alt="Frame 5" />
+                        <img src="/jungle 3.png" alt="Frame 5" />
                         <span className="frame-text">JUNGLE</span>
                     </div>
                     <div className="video-frame panda-frame" onClick={() => navigate('/panda')}>
@@ -63,7 +63,7 @@ function Home() {
                     </div>
                     <div className="video-frame danza-frame" onClick={() => navigate('/danza')}>
                         <img src="/danza alejandro.png" alt="Frame 7" />
-                        <span className="frame-text">DANZA</span>
+                        <span className="frame-text">{t.danzaTitle}</span>
                     </div>
                     <div className="video-frame motion-frame" onClick={() => navigate('/motion')}>
                         <img src="/motions 1.png" alt="Frame 8" />
