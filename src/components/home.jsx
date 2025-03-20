@@ -1,10 +1,9 @@
 import React from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 import "./home.css";
 
 function Home() {
-    const navigate = useNavigate();
     const { language, setLanguage, t } = useLanguage();
 
     const handleLanguageChange = (e) => {
@@ -37,53 +36,53 @@ function Home() {
             {/* Portfolio */}
             <div className="portfolio">
                 <div className="video-grid">
-                    <div className="video-frame libro-frame" onClick={() => navigate('/mormon')}>
+                    <Link to="/mormon" className="video-frame libro-frame">
                         <img src="/libro de mormón.png" alt="Frame 1" />
                         <span className="frame-text">{t.mormonTitle}</span>
-                    </div>
-                    <div className="video-frame endless-frame" onClick={() => navigate('/endlessstairs')}>
+                    </Link>
+                    <Link to="/endlessstairs" className="video-frame endless-frame">
                         <img src="/endlesstairs (1).png" alt="Frame 2" />
                         <span className="frame-text">ENDLESSTAIRS</span>
-                    </div>
-                    <div className="video-frame redrum-frame" onClick={() => navigate('/redrum')}>
+                    </Link>
+                    <Link to="/redrum" className="video-frame redrum-frame">
                         <img src="/redrum-2.png" alt="Frame 3" />
                         <span className="frame-text">REDRUM</span>
-                    </div>
-                    <div className="video-frame grande-frame" onClick={() => navigate('/cortos')}>
+                    </Link>
+                    <Link to="/cortos" className="video-frame grande-frame">
                         <img src="/cortos en grande (1).png" alt="Frame 4" />
                         <span className="frame-text">CORTOS EN GRANDE</span>
-                    </div>
-                    <div className="video-frame jungle-frame" onClick={() => navigate('/jungle')}>
+                    </Link>
+                    <Link to="/jungle" className="video-frame jungle-frame">
                         <img src="/jungle 3.png" alt="Frame 5" />
                         <span className="frame-text">JUNGLE</span>
-                    </div>
-                    <div className="video-frame panda-frame" onClick={() => navigate('/panda')}>
+                    </Link>
+                    <Link to="/panda" className="video-frame panda-frame">
                         <img src="/panda.png" alt="Frame 6" />
                         <span className="frame-text">PANDA</span>
-                    </div>
-                    <div className="video-frame danza-frame" onClick={() => navigate('/danza')}>
+                    </Link>
+                    <Link to="/danza" className="video-frame danza-frame">
                         <img src="/danza alejandro.png" alt="Frame 7" />
                         <span className="frame-text">{t.danzaTitle}</span>
-                    </div>
-                    <div className="video-frame motion-frame" onClick={() => navigate('/motion')}>
+                    </Link>
+                    <Link to="/motion" className="video-frame motion-frame">
                         <img src="/motions 1.png" alt="Frame 8" />
                         <span className="frame-text">MOTION GRAPHICS AND ANIMATION PORTFOLIO</span>
-                    </div>
+                    </Link>
                 </div>
 
                 <div className="video-grid-short">
-                    <div className="video-frame-short surarquia2-frame" onClick={() => navigate('/surarquia2')}>
+                    <Link to="/surarquia2" className="video-frame-short surarquia2-frame">
                         <img src="/surarquia 2.png" alt="Frame 9" />
                         <span className="frame-text-short">SURARQUIA 2</span>
-                    </div>
-                    <div className="video-frame-short surarquia1-frame" onClick={() => navigate('/surarquia')}>
+                    </Link>
+                    <Link to="/surarquia" className="video-frame-short surarquia1-frame">
                         <img src="/surarquia.png" alt="Frame 10" />
                         <span className="frame-text-short">SURARQUIA</span>
-                    </div>
-                    <div className="video-frame-short doll-frame" onClick={() => navigate('/dollhouse')}>
+                    </Link>
+                    <Link to="/dollhouse" className="video-frame-short doll-frame">
                         <img src="/dollhouse disco.png" alt="Frame 11" />
                         <span className="frame-text-short">DOLLHOUSE DISCO</span>
-                    </div>
+                    </Link>
                 </div>
             </div>
 
