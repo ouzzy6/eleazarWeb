@@ -20,7 +20,7 @@ function Contact() {
         e.preventDefault();
 
         // Reemplaza estos valores con los tuyos
-        const serviceID = "service_euhz6lq";
+        const serviceID = "service_wzth4qh";
         const templateID = "template_e8a7pjh";
         const publicKey = "pu5nU8PjLwSpoWbEK";
 
