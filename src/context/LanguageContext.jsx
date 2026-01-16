@@ -207,7 +207,7 @@ export const LanguageProvider = ({ children }) => {
                 <strong>Cliente:</strong> Dollhouse Disco<br /><br />
                 <strong>Localización:</strong> Barcelona, España
             `,
-            copyright: "© 2025 ELEAZAR UBIEDA"
+            copyright: "© 2026 ELEAZAR UBIEDA"
         },
         en: {
             aboutMe: "ABOUT ME",

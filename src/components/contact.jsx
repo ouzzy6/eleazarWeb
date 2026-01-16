@@ -21,7 +21,7 @@ function Contact() {
 
         // Reemplaza estos valores con los tuyos
         const serviceID = "service_euhz6lq";
-        const templateID = "template_fcuz0nf";
+        const templateID = "template_e8a7pjh";
         const publicKey = "pu5nU8PjLwSpoWbEK";
 
         emailjs.send(serviceID, templateID, formData, publicKey)
